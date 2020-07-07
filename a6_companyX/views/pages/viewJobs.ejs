@@ -1,0 +1,52 @@
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+</style>
+
+<body>
+  <h1>View Your Job Data</h1>
+  <br />
+  <table>
+    <thread>
+      <tr>
+        <th>Job Name</th>
+        <th>Part ID</th>
+        <th>Quantity</th>
+      </tr>
+    </thread>
+    <tbody>
+      <% jobs.forEach(function(job){ %>
+      <tr>
+        <td><%= job.id %></td>
+        <td><%= job.partid %></td>
+        <td><%= job.quantity %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <br />
+  <form action="/">
+    <button>Home</button>
+  </form>
+  <br />
+  <form action="/skhatri707/addData">
+    <button>Add Data</button>
+  </form>
+</body>
